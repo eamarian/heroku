@@ -1,6 +1,6 @@
 package com;
 
-import com.example.models.Time;
+import com.Time;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
