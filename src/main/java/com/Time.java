@@ -1,10 +1,8 @@
 package com;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Calendar;
 import java.util.TimeZone;
 
-@XmlRootElement
 public class Time {
 
     private String timezone;
