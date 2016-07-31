@@ -13,12 +13,13 @@ import java.io.IOException;
 @Provider
 public class AuthFilter implements ContainerRequestFilter {
 
-	private static final String username = "";
-	private static final String password = "";
+	private static final String username = "user";
+	private static final String password = "password";
 
 	@Override
 	public void filter(ContainerRequestContext containerRequest) throws WebApplicationException {
 
+			System.out.println("Here!");
 	    String authCredentials = containerRequest.getHeaderString("Authorization");
 
 	    boolean authStatus = authenticate(authCredentials);
@@ -41,6 +42,7 @@ public class AuthFilter implements ContainerRequestFilter {
 			  e.printStackTrace();
 			  return false;
 		  }
+			System.out.println(usernameAndPassword);
 		  if (usernameAndPassword == null || !usernameAndPassword.contains(":"))
 			  return false;
 
