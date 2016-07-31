@@ -13,7 +13,10 @@ public class TimeService {
 
     @GET
     public Time get() {
-        return new Time();
+        Time time = new Time();
+        System.out.println(time.getYear());
+
+        return time;
     }
 
 }
