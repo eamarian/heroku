@@ -19,7 +19,6 @@ public class AuthFilter implements ContainerRequestFilter {
 	@Override
 	public void filter(ContainerRequestContext containerRequest) throws WebApplicationException {
 
-			System.out.println("Here!");
 	    String authCredentials = containerRequest.getHeaderString("Authorization");
 
 	    boolean authStatus = authenticate(authCredentials);
@@ -42,7 +41,6 @@ public class AuthFilter implements ContainerRequestFilter {
 			  e.printStackTrace();
 			  return false;
 		  }
-			System.out.println(usernameAndPassword);
 		  if (usernameAndPassword == null || !usernameAndPassword.contains(":"))
 			  return false;
 
