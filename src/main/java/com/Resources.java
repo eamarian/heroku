@@ -8,15 +8,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/resources")
-@Produces(MediaType.APPLICATION_JSON)
-public class TimeService {
+public class Resources {
 
     @GET
+    @Path("/time")
+    @Produces(MediaType.APPLICATION_JSON)
     public Time get() {
-        Time time = new Time();
-        System.out.println(time.getYear());
 
-        return time;
+        return new Time();
     }
-
 }
